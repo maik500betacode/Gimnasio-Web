@@ -1,0 +1,65 @@
+:root {
+    /* Colores principales */
+    --primary-color: #ff4500;
+    --secondary-color: #1e90ff;
+    --accent-color: #32cd32;
+    
+    /* Colores neutros */
+    --dark-color: #222;
+    --light-color: #f4f4f4;
+    --gray-color: #888;
+    --light-gray: #ddd;
+    
+    /* Fuentes */
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
+    
+    /* Tamaños de fuente */
+    --font-size-small: 0.875rem;
+    --font-size-normal: 1rem;
+    --font-size-medium: 1.25rem;
+    --font-size-large: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 3rem;
+    
+    /* Espaciado */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+    
+    /* Bordes y sombras */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.2);
+    
+    /* Transiciones */
+    --transition-fast: 0.3s ease;
+    --transition-normal: 0.5s ease;
+    --transition-slow: 0.8s ease;
+    
+    /* Z-index */
+    --z-back: -1;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/* Modo oscuro */
+[data-theme="dark"] {
+    --primary-color: #ff6347;
+    --secondary-color: #4682b4;
+    --accent-color: #3cb371;
+    
+    --dark-color: #f4f4f4;
+    --light-color: #333;
+    --gray-color: #aaa;
+    --light-gray: #444;
+    
+    --box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    --box-shadow-hover: 0 8px 25px rgba(255, 255, 255, 0.2);
+}

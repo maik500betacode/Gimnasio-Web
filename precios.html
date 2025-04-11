@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precios - GymFit</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/precios.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header con mega-menú (igual que en index.html) -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Gym<span>Fit</span></h1>
+            </div>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav class="main-nav">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="has-submenu">
+                        <a href="clases.html">Clases <i class="fas fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="clases.html#musculacion">Musculación</a></li>
+                            <li><a href="clases.html#crossfit">CrossFit</a></li>
+                            <li><a href="clases.html#yoga">Yoga</a></li>
+                            <li><a href="clases.html#spinning">Spinning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="entrenadores.html">Entrenadores</a></li>
+                    <li><a href="precios.html" class="active">Precios</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html" class="btn-contact">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle" class="switch">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner de página -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>Nuestros Precios</h1>
+            <p>Planes flexibles para adaptarse a tus necesidades</p>
+        </div>
+    </section>
+
+    <!-- Planes de precios -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Planes de Membresía</h2>
+            
+            <div class="pricing-toggle">
+                <span class="toggle-label">Mensual</span>
+                <label class="toggle">
+                    <input type="checkbox" id="pricing-toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label">Anual <span class="discount">20% descuento</span></span>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Plan Básico -->
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Plan Básico</h3>
+                        <div class="price-container">
+                            <div class="price monthly">
+                                <span class="currency">$</span>
+                                <span class="amount">29</span>
+                                <span class="period">/mes</span>
+                            </div>
+                            <div class="price annual">
+                                <span class="currency">$</span>
+                                <span class="amount">23</span>
+                                <span class="period">/mes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="features-list">
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Acceso a sala de musculación</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Horario limitado (8:00 - 16:00)</span>
+                                <div class="tooltip" data-tooltip="Acceso de lunes a viernes">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>1 clase grupal por semana</span>
+                            </li>
+                            <li class="disabled">
+                                <i class="fas fa-times"></i>
+                                <span>Acceso a todas las clases</span>
+                            </li>
+                            <li class="disabled">
+                                <i class="fas fa-times"></i>
+                                <span>Entrenamiento personalizado</span>
+                            </li>
+                            <li class="disabled">
+                                <i class="fas fa-times"></i>
+                                <span>Evaluación física mensual</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="contacto.html" class="btn btn-secondary">Elegir Plan</a>
+                    </div>
+                </div>
+                
+                <!-- Plan Estándar -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Más Popular</div>
+                    <div class="card-header">
+                        <h3>Plan Estándar</h3>
+                        <div class="price-container">
+                            <div class="price monthly">
+                                <span class="currency">$</span>
+                                <span class="amount">49</span>
+                                <span class="period">/mes</span>
+                            </div>
+                            <div class="price annual">
+                                <span class="currency">$</span>
+                                <span class="amount">39</span>
+                                <span class="period">/mes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="features-list">
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Acceso a sala de musculación</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Horario completo</span>
+                                <div class="tooltip" data-tooltip="Acceso todos los días en horario completo">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Acceso a todas las clases</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>1 sesión de entrenamiento personalizado</span>
+                            </li>
+                            <li class="disabled">
+                                <i class="fas fa-times"></i>
+                                <span>Plan nutricional</span>
+                            </li>
+                            <li class="disabled">
+                                <i class="fas fa-times"></i>
+                                <span>Evaluación física mensual</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="contacto.html" class="btn btn-primary">Elegir Plan</a>
+                    </div>
+                </div>
+                
+                <!-- Plan Premium -->
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h3>Plan Premium</h3>
+                        <div class="price-container">
+                            <div class="price monthly">
+                                <span class="currency">$</span>
+                                <span class="amount">79</span>
+                                <span class="period">/mes</span>
+                            </div>
+                            <div class="price annual">
+                                <span class="currency">$</span>
+                                <span class="amount">63</span>
+                                <span class="period">/mes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="features-list">
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Acceso a sala de musculación</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Horario completo</span>
+                                <div class="tooltip" data-tooltip="Acceso todos los días en horario completo">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Acceso a todas las clases</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>4 sesiones de entrenamiento personalizado</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Plan nutricional personalizado</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Evaluación física mensual</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="contacto.html" class="btn btn-secondary">Elegir Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preguntas frecuentes -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Puedo cancelar mi membresía en cualquier momento?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, puedes cancelar tu membresía mensual en cualquier momento con un preaviso de 15 días. Para las membresías anuales, se aplican condiciones específicas que puedes consultar en nuestros términos y condiciones.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Qué incluye la evaluación física?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>La evaluación física incluye mediciones de composición corporal, pruebas de resistencia, fuerza y flexibilidad, y una consulta personalizada para revisar tu progreso y ajustar tus objetivos.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Cómo reservo las clases grupales?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Puedes reservar tus clases a través de nuestra aplicación móvil o en la recepción del gimnasio. Te recomendamos reservar con al menos 24 horas de antelación para asegurar tu plaza.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Ofrecen descuentos para estudiantes o personas mayores?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, ofrecemos un 15% de descuento para estudiantes y personas mayores de 65 años. Deberás presentar la documentación correspondiente al momento de inscribirte.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Qué pasa si no puedo asistir a mi sesión de entrenamiento personalizado?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Debes cancelar tu sesión con al menos 24 horas de antelación para poder reprogramarla. Las cancelaciones con menos tiempo o las ausencias sin aviso se considerarán como sesiones utilizadas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Puedo congelar mi membresía temporalmente?</h3>
+                        <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, puedes congelar tu membresía hasta por 30 días al año (consecutivos o no) por motivos de viaje, enfermedad u otras circunstancias. Debes solicitarlo con al menos 5 días de anticipación.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (igual que en index.html) -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>Gym<span>Fit</span></h3>
+                    <p>Tu gimnasio de confianza con las mejores instalaciones y entrenadores certificados.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Suscríbete a Nuestro Newsletter</h3>
+                    <p>Recibe consejos fitness, promociones y novedades.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required aria-label="Email para newsletter">
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contáctanos</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@gymfit.com</p>
+                </div>
+                
+                <div class="footer-map">
+                    <h3>Encuéntranos</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-58.43,-34.61,-58.37,-34.57&amp;layer=mapnik" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 GymFit. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/precios.js"></script>
+</body>
+</html>

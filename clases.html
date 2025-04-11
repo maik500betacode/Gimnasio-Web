@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases - GymFit</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/clases.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header con mega-menú (igual que en index.html) -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Gym<span>Fit</span></h1>
+            </div>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav class="main-nav">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="has-submenu">
+                        <a href="clases.html" class="active">Clases <i class="fas fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#musculacion">Musculación</a></li>
+                            <li><a href="#crossfit">CrossFit</a></li>
+                            <li><a href="#yoga">Yoga</a></li>
+                            <li><a href="#spinning">Spinning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="entrenadores.html">Entrenadores</a></li>
+                    <li><a href="precios.html">Precios</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html" class="btn-contact">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle" class="switch">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner de página -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>Nuestras Clases</h1>
+            <p>Descubre todas las actividades que tenemos para ti</p>
+        </div>
+    </section>
+
+    <!-- Filtros de clases -->
+    <section class="class-filters">
+        <div class="container">
+            <div class="filter-container">
+                <h2>Filtrar por categoría</h2>
+                <div class="filter-options">
+                    <input type="radio" id="all" name="category" value="all" checked>
+                    <label for="all">Todas</label>
+                    
+                    <input type="radio" id="musculacion" name="category" value="musculacion">
+                    <label for="musculacion">Musculación</label>
+                    
+                    <input type="radio" id="crossfit" name="category" value="crossfit">
+                    <label for="crossfit">CrossFit</label>
+                    
+                    <input type="radio" id="yoga" name="category" value="yoga">
+                    <label for="yoga">Yoga</label>
+                    
+                    <input type="radio" id="spinning" name="category" value="spinning">
+                    <label for="spinning">Spinning</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de clases tipo masonry -->
+    <section class="classes-gallery">
+        <div class="container">
+            <div class="masonry-grid">
+                <!-- Musculación -->
+                <div class="class-item musculacion">
+                    <div class="class-image">
+                        <img src="img/musculacion-1.jpg" alt="Clase de Musculación">
+                        <div class="overlay">
+                            <h3>Entrenamiento de Fuerza</h3>
+                            <p>Desarrolla tu fuerza y resistencia muscular</p>
+                            <a href="#" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="class-item musculacion">
+                    <div class="class-image tall">
+                        <img src="img/musculacion-2.jpg" alt="Clase de Musculación Avanzada">
+                        <div class="overlay">
+                            <h3>Hipertrofia</h3>
+                            <p>Aumenta tu masa muscular con técnicas avanzadas</p>
+                            <a href="#" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CrossFit -->
+                <div class="class-item crossfit">
+                    <div class="class-image">
+                        <img src="img/crossfit-1.jpg" alt="Clase de CrossFit">
+                        <div class="overlay">
+                            <h3>CrossFit Básico</h3>
+                            <p>Introducción a los movimientos funcionales</p>
+                            <a href="#" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="class-item crossfit">
+                    <div class="class-image wide">
+                        <img src="img/crossfit-2.jpg" alt="Clase de CrossFit Avanzado">
+                        <div class="overlay">
+                            <h3>WOD Challenge</h3>
+                            <p>Desafíos diarios para mejorar tu rendimiento</p>
+                            <a href="#" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Yoga -->
+                <div class="class-item yoga">
+                    <div class="class-image tall">
+                        <img src="img/yoga-1.jpg" alt="Clase de Yoga">
+                        <div class="overlay">
+                            <h3>Hatha Yoga</h3>
+                            <p>Equilibra cuerpo y mente con posturas clásicas</p>
+                            <a href="#" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="class-item yoga">
+                    <div class="class-image">
+                        <img src="img/yoga-2.jpg" alt="Clase de Yoga Avanzado">
+                        <div class="overlay">
+                            <h3>Vinyasa Flow</h3>
+                            <p>Secuencias dinámicas para todos los niveles</p>
+                            <a href="#" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Spinning -->
+                <div class="class-item spinning">
+                    <div class="class-image wide">
+                        <img src="img/spinning-1.jpg" alt="Clase de Spinning">
+                        <div class="overlay">
+                            <h3>Spinning Básico</h3>
+                            <p>Cardio intenso con música motivadora</p>
+                            <a href="#" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="class-item spinning">
+                    <div class="class-image">
+                        <img src="img/spinning-2.jpg" alt="Clase de Spinning Avanzado">
+                        <div class="overlay">
+                            <h3>HIIT Cycling</h3>
+                            <p>Intervalos de alta intensidad para máxima quema</p>
+                            <a href="#" class="btn btn-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horarios de clases -->
+    <section class="class-schedule">
+        <div class="container">
+            <h2 class="section-title">Horarios Semanales</h2>
+            
+            <div class="schedule-container">
+                <div class="schedule-table-wrapper">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Hora</th>
+                                <th>Lunes</th>
+                                <th>Martes</th>
+                                <th>Miércoles</th>
+                                <th>Jueves</th>
+                                <th>Viernes</th>
+                                <th>Sábado</th>
+                                <th>Domingo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time">08:00</td>
+                                <td class="crossfit">CrossFit</td>
+                                <td class="yoga">Yoga</td>
+                                <td class="crossfit">CrossFit</td>
+                                <td class="yoga">Yoga</td>
+                                <td class="crossfit">CrossFit</td>
+                                <td class="spinning">Spinning</td>
+                                <td rowspan="6" class="closed">Cerrado</td>
+                            </tr>
+                            <tr>
+                                <td class="time">10:00</td>
+                                <td class="musculacion">Musculación</td>
+                                <td class="spinning">Spinning</td>
+                                <td class="musculacion">Musculación</td>
+                                <td class="spinning">Spinning</td>
+                                <td class="musculacion">Musculación</td>
+                                <td class="yoga">Yoga</td>
+                            </tr>
+                            <tr>
+                                <td class="time">12:00</td>
+                                <td class="yoga">Yoga</td>
+                                <td class="musculacion">Musculación</td>
+                                <td class="yoga">Yoga</td>
+                                <td class="musculacion">Musculación</td>
+                                <td class="yoga">Yoga</td>
+                                <td class="crossfit">CrossFit</td>
+                            </tr>
+                            <tr>
+                                <td class="time">16:00</td>
+                                <td class="spinning">Spinning</td>
+                                <td class="crossfit">CrossFit</td>
+                                <td class="spinning">Spinning</td>
+                                <td class="crossfit">CrossFit</td>
+                                <td class="spinning">Spinning</td>
+                                <td rowspan="3" class="closed">Cerrado</td>
+                            </tr>
+                            <tr>
+                                <td class="time">18:00</td>
+                                <td class="crossfit">CrossFit</td>
+                                <td class="musculacion">Musculación</td>
+                                <td class="crossfit">CrossFit</td>
+                                <td class="musculacion">Musculación</td>
+                                <td class="crossfit">CrossFit</td>
+                            </tr>
+                            <tr>
+                                <td class="time">20:00</td>
+                                <td class="spinning">Spinning</td>
+                                <td class="yoga">Yoga</td>
+                                <td class="spinning">Spinning</td>
+                                <td class="yoga">Yoga</td>
+                                <td class="spinning">Spinning</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="schedule-mobile">
+                    <select id="day-selector" class="day-selector">
+                        <option value="monday">Lunes</option>
+                        <option value="tuesday">Martes</option>
+                        <option value="wednesday">Miércoles</option>
+                        <option value="thursday">Jueves</option>
+                        <option value="friday">Viernes</option>
+                        <option value="saturday">Sábado</option>
+                        <option value="sunday">Domingo</option>
+                    </select>
+                    
+                    <div class="mobile-schedule monday">
+                        <div class="mobile-class">
+                            <span class="mobile-time">08:00</span>
+                            <span class="mobile-class-name crossfit">CrossFit</span>
+                        </div>
+                        <div class="mobile-class">
+                            <span class="mobile-time">10:00</span>
+                            <span class="mobile-class-name musculacion">Musculación</span>
+                        </div>
+                        <div class="mobile-class">
+                            <span class="mobile-time">12:00</span>
+                            <span class="mobile-class-name yoga">Yoga</span>
+                        </div>
+                        <div class="mobile-class">
+                            <span class="mobile-time">16:00</span>
+                            <span class="mobile-class-name spinning">Spinning</span>
+                        </div>
+                        <div class="mobile-class">
+                            <span class="mobile-time">18:00</span>
+                            <span class="mobile-class-name crossfit">CrossFit</span>
+                        </div>
+                        <div class="mobile-class">
+                            <span class="mobile-time">20:00</span>
+                            <span class="mobile-class-name spinning">Spinning</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Otros días similares... -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (igual que en index.html) -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>Gym<span>Fit</span></h3>
+                    <p>Tu gimnasio de confianza con las mejores instalaciones y entrenadores certificados.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Suscríbete a Nuestro Newsletter</h3>
+                    <p>Recibe consejos fitness, promociones y novedades.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required aria-label="Email para newsletter">
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contáctanos</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@gymfit.com</p>
+                </div>
+                
+                <div class="footer-map">
+                    <h3>Encuéntranos</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-58.43,-34.61,-58.37,-34.57&amp;layer=mapnik" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 GymFit. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/clases.js"></script>
+</body>
+</html>

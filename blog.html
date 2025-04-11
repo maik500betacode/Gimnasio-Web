@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - GymFit</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header con mega-menú (igual que en index.html) -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Gym<span>Fit</span></h1>
+            </div>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav class="main-nav">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="has-submenu">
+                        <a href="clases.html">Clases <i class="fas fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="clases.html#musculacion">Musculación</a></li>
+                            <li><a href="clases.html#crossfit">CrossFit</a></li>
+                            <li><a href="clases.html#yoga">Yoga</a></li>
+                            <li><a href="clases.html#spinning">Spinning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="entrenadores.html">Entrenadores</a></li>
+                    <li><a href="precios.html">Precios</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contacto.html" class="btn-contact">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle" class="switch">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner de página -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>Blog de Fitness</h1>
+            <p>Consejos, rutinas y noticias sobre el mundo del fitness</p>
+        </div>
+    </section>
+
+    <!-- Filtros de blog -->
+    <section class="blog-filters">
+        <div class="container">
+            <div class="filter-container">
+                <h2>Explorar por categoría</h2>
+                <div class="filter-options">
+                    <input type="radio" id="all" name="category" value="all" checked>
+                    <label for="all">Todos</label>
+                    
+                    <input type="radio" id="nutrition" name="category" value="nutrition">
+                    <label for="nutrition">Nutrición</label>
+                    
+                    <input type="radio" id="training" name="category" value="training">
+                    <label for="training">Entrenamiento</label>
+                    
+                    <input type="radio" id="wellness" name="category" value="wellness">
+                    <label for="wellness">Bienestar</label>
+                    
+                    <input type="radio" id="motivation" name="category" value="motivation">
+                    <label for="motivation">Motivación</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artículos destacados -->
+    <section class="featured-posts">
+        <div class="container">
+            <div class="featured-grid">
+                <article class="featured-main training">
+                    <div class="article-image">
+                        <img src="img/blog-featured-1.jpg" alt="Entrenamiento de fuerza">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category">Entrenamiento</span>
+                            <span class="date">15 Marzo, 2025</span>
+                        </div>
+                        <h2>Guía Completa de Entrenamiento de Fuerza para Principiantes</h2>
+                        <p>Descubre cómo iniciar tu camino en el entrenamiento de fuerza con esta guía paso a paso diseñada especialmente para principiantes.</p>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="featured-secondary nutrition">
+                    <div class="article-image">
+                        <img src="img/blog-featured-2.jpg" alt="Nutrición deportiva">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category">Nutrición</span>
+                            <span class="date">10 Marzo, 2025</span>
+                        </div>
+                        <h3>Los 10 Superalimentos que Deberías Incluir en tu Dieta</h3>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="featured-secondary wellness">
+                    <div class="article-image">
+                        <img src="img/blog-featured-3.jpg" alt="Meditación y mindfulness">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category">Bienestar</span>
+                            <span class="date">5 Marzo, 2025</span>
+                        </div>
+                        <h3>Cómo la Meditación Puede Mejorar tu Rendimiento Deportivo</h3>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artículos del blog -->
+    <section class="blog-posts">
+        <div class="container">
+            <div class="newspaper-grid">
+                <article class="blog-post training scroll-reveal">
+                    <div class="article-image">
+                        <img src="img/blog-1.jpg" alt="Rutina de HIIT">
+                        <div class="article-tags">
+                            <span class="tag">HIIT</span>
+                            <span class="tag">Cardio</span>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category">Entrenamiento</span>
+                            <span class="date">1 Marzo, 2025</span>
+                        </div>
+                        <h3>5 Rutinas de HIIT para Maximizar la Quema de Calorías</h3>
+                        <p>El entrenamiento de intervalos de alta intensidad (HIIT) es una de las formas más eficientes de quemar calorías y mejorar tu condición física en poco tiempo.</p>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="blog-post nutrition scroll-reveal">
+                    <div class="article-image">
+                        <img src="img/blog-2.jpg" alt="Proteínas vegetales">
+                        <div class="article-tags">
+                            <span class="tag">Proteínas</span>
+                            <span class="tag">Vegetariano</span>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category">Nutrición</span>
+                            <span class="date">25 Febrero, 2025</span>
+                        </div>
+                        <h3>Fuentes de Proteína Vegetal para Deportistas</h3>
+                        <p>Descubre cómo obtener suficiente proteína en una dieta basada en plantas para apoyar tu rendimiento deportivo y recuperación muscular.</p>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="blog-post motivation scroll-reveal">
+                    <div class="article-image">
+                        <img src="img/blog-3.jpg" alt="Motivación fitness">
+                        <div class="article-tags">
+                            <span class="tag">Motivación</span>
+                            <span class="tag">Hábitos</span>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category">Motivación</span>
+                            <span class="date">20 Febrero, 2025</span>
+                        </div>
+                        <h3>Cómo Mantener la Motivación en tu Rutina de Ejercicios</h3>
+                        <p>Estrategias prácticas para mantener la constancia y superar los obstáculos que pueden aparecer en tu camino hacia un estilo de vida más activo.</p>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="blog-post wellness scroll-reveal">
+                    <div class="article-image">
+                        <img src="img/blog-4.jpg" alt="Calidad del sueño">
+                        <div class="article-tags">
+                            <span class="tag">Sueño</span>
+                            <span class="tag">Recuperación</span>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category">Bienestar</span>
+                            <span class="date">15 Febrero, 2025</span>
+                        </div>
+                        <h3>La Importancia del Sueño en la Recuperación Muscular</h3>
+                        <p>Aprende por qué el sueño de calidad es tan importante para la recuperación muscular y cómo optimizar tus hábitos de descanso.</p>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="blog-post training scroll-reveal">
+                    <div class="article-image">
+                        <img src="img/blog-5.jpg" alt="Entrenamiento con pesas">
+                        <div class="article-tags">
+                            <span class="tag">Fuerza</span>
+                            <span class="tag">Técnica</span>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category">Entrenamiento</span>
+                            <span class="date">10 Febrero, 2025</span>
+                        </div>
+                        <h3>Errores Comunes en el Entrenamiento con Pesas y Cómo Evitarlos</h3>
+                        <p>Identifica y corrige los errores más frecuentes que pueden limitar tus resultados y aumentar el riesgo de lesiones en el gimnasio.</p>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                
+                <article class="blog-post nutrition scroll-reveal">
+                    <div class="article-image">
+                        <img src="img/blog-6.jpg" alt="Hidratación deportiva">
+                        <div class="article-tags">
+                            <span class="tag">Hidratación</span>
+                            <span class="tag">Rendimiento</span>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="category">Nutrición</span>
+                            <span class="date">5 Febrero, 2025</span>
+                        </div>
+                        <h3>Guía Completa de Hidratación para Deportistas</h3>
+                        <p>Todo lo que necesitas saber sobre la hidratación antes, durante y después del ejercicio para optimizar tu rendimiento y recuperación.</p>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="pagination">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <span class="page-dots">...</span>
+                <a href="#" class="page-link">10</a>
+                <a href="#" class="page-next">Siguiente <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de comentarios -->
+    <section class="comments-section">
+        <div class="container">
+            <h2 class="section-title">Comentarios Recientes</h2>
+            
+            <div class="comments-container">
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <div class="avatar-placeholder" data-initials="MG"></div>
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <h4>María González</h4>
+                            <span class="comment-date">2 días atrás</span>
+                        </div>
+                        <p>¡Excelente artículo sobre entrenamiento de fuerza! Me ha ayudado mucho a entender cómo estructurar mis rutinas. Gracias por compartir información tan valiosa.</p>
+                        <div class="comment-actions">
+                            <a href="#" class="comment-reply">Responder</a>
+                            <a href="#" class="comment-like"><i class="fas fa-heart"></i> 5</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <div class="avatar-placeholder" data-initials="JR"></div>
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <h4>Juan Rodríguez</h4>
+                            <span class="comment-date">5 días atrás</span>
+                        </div>
+                        <p>Estoy siguiendo las rutinas de HIIT que recomendaron y los resultados son increíbles. En solo dos semanas ya noto la diferencia en mi resistencia.</p>
+                        <div class="comment-actions">
+                            <a href="#" class="comment-reply">Responder</a>
+                            <a href="#" class="comment-like"><i class="fas fa-heart"></i> 3</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comment">
+                    <div class="comment-avatar">
+                        <div class="avatar-placeholder" data-initials="LP"></div>
+                    </div>
+                    <div class="comment-content">
+                        <div class="comment-header">
+                            <h4>Laura Pérez</h4>
+                            <span class="comment-date">1 semana atrás</span>
+                        </div>
+                        <p>Me encantaría ver más contenido sobre nutrición para personas con intolerancias alimentarias. Es un tema que afecta a muchos deportistas y no siempre se aborda.</p>
+                        <div class="comment-actions">
+                            <a href="#" class="comment-reply">Responder</a>
+                            <a href="#" class="comment-like"><i class="fas fa-heart"></i> 7</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comment-form-container">
+                <h3>Deja un comentario</h3>
+                <form class="comment-form">
+                    <div class="form-group">
+                        <label for="name">Nombre <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comment">Comentario <span class="required">*</span></label>
+                        <textarea id="comment" name="comment" rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="save-info" name="save-info">
+                        <label for="save-info">Guardar mi nombre y correo para la próxima vez</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Publicar Comentario</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (igual que en index.html) -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>Gym<span>Fit</span></h3>
+                    <p>Tu gimnasio de confianza con las mejores instalaciones y entrenadores certificados.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Suscríbete a Nuestro Newsletter</h3>
+                    <p>Recibe consejos fitness, promociones y novedades.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required aria-label="Email para newsletter">
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contáctanos</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@gymfit.com</p>
+                </div>
+                
+                <div class="footer-map">
+                    <h3>Encuéntranos</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-58.43,-34.61,-58.37,-34.57&amp;layer=mapnik" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 GymFit. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>

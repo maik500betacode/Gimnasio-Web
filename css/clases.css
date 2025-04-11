@@ -1,0 +1,386 @@
+/* Estilos para la página de clases */
+
+/* Banner de página */
+.page-banner {
+    height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/classes-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+}
+
+.banner-content h1 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-sm);
+    animation: fadeInUp 0.8s var(--transition-normal) forwards;
+}
+
+.banner-content p {
+    font-size: var(--font-size-medium);
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s var(--transition-normal) 0.3s forwards;
+    opacity: 0;
+}
+
+/* Filtros de clases */
+.class-filters {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--light-color);
+}
+
+.filter-container {
+    text-align: center;
+}
+
+.filter-container h2 {
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-large);
+}
+
+.filter-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.filter-options input[type="radio"] {
+    display: none;
+}
+
+.filter-options label {
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: var(--box-shadow);
+    font-weight: 500;
+}
+
+[data-theme="dark"] .filter-options label {
+    background-color: var(--dark-color);
+}
+
+.filter-options input[type="radio"]:checked + label {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+/* Galería tipo masonry */
+.classes-gallery {
+    padding: var(--spacing-lg) 0;
+}
+
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+    gap: var(--spacing-md);
+}
+
+.class-item {
+    overflow: hidden;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-fast);
+}
+
+.class-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.class-image {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.class-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.class-item:hover .class-image img {
+    transform: scale(1.1);
+}
+
+.class-image.tall {
+    grid-row: span 2;
+}
+
+.class-image.wide {
+    grid-column: span 2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--spacing-md);
+    color: white;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.class-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    font-size: var(--font-size-medium);
+    margin-bottom: 5px;
+    transform: translateY(20px);
+    transition: transform var(--transition-fast);
+}
+
+.overlay p {
+    margin-bottom: var(--spacing-sm);
+    transform: translateY(20px);
+    transition: transform var(--transition-fast) 0.1s;
+}
+
+.overlay .btn {
+    align-self: flex-start;
+    transform: translateY(20px);
+    transition: transform var(--transition-fast) 0.2s;
+}
+
+.class-item:hover .overlay h3,
+.class-item:hover .overlay p,
+.class-item:hover .overlay .btn {
+    transform: translateY(0);
+}
+
+/* Filtrado con CSS */
+#all:checked ~ .container .masonry-grid .class-item {
+    display: block;
+}
+
+#musculacion:checked ~ .container .masonry-grid .class-item:not(.musculacion) {
+    display: none;
+}
+
+#crossfit:checked ~ .container .masonry-grid .class-item:not(.crossfit) {
+    display: none;
+}
+
+#yoga:checked ~ .container .masonry-grid .class-item:not(.yoga) {
+    display: none;
+}
+
+#spinning:checked ~ .container .masonry-grid .class-item:not(.spinning) {
+    display: none;
+}
+
+/* Horarios de clases */
+.class-schedule {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--light-color);
+}
+
+.schedule-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: var(--spacing-md);
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+[data-theme="dark"] .schedule-table {
+    background-color: var(--dark-color);
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid var(--light-gray);
+}
+
+.schedule-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.schedule-table .time {
+    font-weight: 600;
+    background-color: var(--light-gray);
+}
+
+[data-theme="dark"] .schedule-table .time {
+    background-color: #444;
+}
+
+.schedule-table .crossfit {
+    background-color: rgba(255, 69, 0, 0.1);
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.schedule-table .yoga {
+    background-color: rgba(30, 144, 255, 0.1);
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.schedule-table .musculacion {
+    background-color: rgba(50, 205, 50, 0.1);
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.schedule-table .spinning {
+    background-color: rgba(255, 215, 0, 0.1);
+    color: #ffa500;
+    font-weight: 500;
+}
+
+.schedule-table .closed {
+    background-color: var(--light-gray);
+    color: var(--gray-color);
+    font-style: italic;
+}
+
+/* Horarios para móvil */
+.schedule-mobile {
+    display: none;
+    margin-top: var(--spacing-md);
+}
+
+.day-selector {
+    width: 100%;
+    padding: 12px;
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--light-gray);
+    background-color: white;
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-normal);
+    outline: none;
+}
+
+[data-theme="dark"] .day-selector {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+.mobile-class {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    margin-bottom: 10px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+[data-theme="dark"] .mobile-class {
+    background-color: var(--dark-color);
+}
+
+.mobile-time {
+    background-color: var(--light-gray);
+    padding: 15px;
+    font-weight: 600;
+    min-width: 80px;
+    text-align: center;
+}
+
+[data-theme="dark"] .mobile-time {
+    background-color: #444;
+}
+
+.mobile-class-name {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.mobile-class-name.crossfit {
+    background-color: rgba(255, 69, 0, 0.1);
+    color: var(--primary-color);
+}
+
+.mobile-class-name.yoga {
+    background-color: rgba(30, 144, 255, 0.1);
+    color: var(--secondary-color);
+}
+
+.mobile-class-name.musculacion {
+    background-color: rgba(50, 205, 50, 0.1);
+    color: var(--accent-color);
+}
+
+.mobile-class-name.spinning {
+    background-color: rgba(255, 215, 0, 0.1);
+    color: #ffa500;
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+    .masonry-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .class-image.wide {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-banner {
+        height: 200px;
+    }
+    
+    .banner-content h1 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .banner-content p {
+        font-size: var(--font-size-normal);
+    }
+    
+    .schedule-table-wrapper {
+        display: none;
+    }
+    
+    .schedule-mobile {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .masonry-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .class-image.tall {
+        grid-row: auto;
+    }
+}

@@ -1,0 +1,301 @@
+/* Estilos para la página de entrenadores */
+
+/* Banner de página */
+.page-banner {
+    height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/trainers-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+}
+
+.banner-content h1 {
+    font-size: var(--font-size-xxl);
+    margin-bottom: var(--spacing-sm);
+    animation: fadeInUp 0.8s var(--transition-normal) forwards;
+}
+
+.banner-content p {
+    font-size: var(--font-size-medium);
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s var(--transition-normal) 0.3s forwards;
+    opacity: 0;
+}
+
+/* Sección de entrenadores */
+.trainers {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--light-color);
+}
+
+.trainers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* Tarjetas de entrenadores con efecto flip */
+.trainer-card {
+    perspective: 1000px;
+    height: 450px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius-md);
+}
+
+.trainer-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+}
+
+.card-front {
+    background-color: white;
+}
+
+[data-theme="dark"] .card-front {
+    background-color: var(--dark-color);
+}
+
+.card-back {
+    background-color: white;
+    color: var(--dark-color);
+    transform: rotateY(180deg);
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+[data-theme="dark"] .card-back {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+.trainer-image {
+    height: 320px;
+    overflow: hidden;
+}
+
+.trainer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.trainer-info {
+    padding: var(--spacing-sm);
+    text-align: center;
+}
+
+.trainer-info h3 {
+    font-size: var(--font-size-medium);
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.trainer-info p {
+    color: var(--gray-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.trainer-social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: var(--spacing-xs);
+}
+
+.trainer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: var(--light-gray);
+    border-radius: 50%;
+    transition: all var(--transition-fast);
+}
+
+.trainer-social a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Estilos para el reverso de la tarjeta */
+.card-back h3 {
+    font-size: var(--font-size-medium);
+    margin-bottom: var(--spacing-xs);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.card-back p {
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+/* Barras de habilidades */
+.skill-bars {
+    margin-bottom: var(--spacing-md);
+}
+
+.skill {
+    margin-bottom: var(--spacing-sm);
+}
+
+.skill-name {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: var(--light-gray);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    position: relative;
+    animation: slideInLeft 1s var(--transition-normal) forwards;
+}
+
+.skill-level::after {
+    content: attr(data-level);
+    position: absolute;
+    right: 0;
+    top: -25px;
+    font-size: var(--font-size-small);
+    font-weight: 600;
+}
+
+/* Sistema de rating */
+.rating {
+    text-align: center;
+}
+
+.stars {
+    color: #ffc107;
+    margin-bottom: 5px;
+}
+
+.rating-text {
+    font-size: var(--font-size-small);
+    color: var(--gray-color);
+}
+
+/* Sección de certificaciones */
+.certifications {
+    padding: var(--spacing-xl) 0;
+    background-color: #f9f9f9;
+}
+
+[data-theme="dark"] .certifications {
+    background-color: #2a2a2a;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.certification-item {
+    background-color: white;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-fast);
+}
+
+[data-theme="dark"] .certification-item {
+    background-color: var(--dark-color);
+}
+
+.certification-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.certification-icon {
+    font-size: 48px;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.certification-item h3 {
+    font-size: var(--font-size-medium);
+    margin-bottom: var(--spacing-xs);
+}
+
+.certification-item p {
+    color: var(--gray-color);
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+    .trainers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .page-banner {
+        height: 200px;
+    }
+    
+    .banner-content h1 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .banner-content p {
+        font-size: var(--font-size-normal);
+    }
+    
+    .trainer-card {
+        height: 400px;
+    }
+    
+    .trainer-image {
+        height: 280px;
+    }
+}
+
+@media (max-width: 576px) {
+    .trainers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+}

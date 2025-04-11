@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymFit - Tu Gimnasio de Confianza</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header con mega-menú -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Gym<span>Fit</span></h1>
+            </div>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav class="main-nav">
+                <ul class="menu">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li class="has-submenu">
+                        <a href="clases.html">Clases <i class="fas fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="clases.html#musculacion">Musculación</a></li>
+                            <li><a href="clases.html#crossfit">CrossFit</a></li>
+                            <li><a href="clases.html#yoga">Yoga</a></li>
+                            <li><a href="clases.html#spinning">Spinning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="entrenadores.html">Entrenadores</a></li>
+                    <li><a href="precios.html">Precios</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html" class="btn-contact">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle" class="switch">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section con video de fondo -->
+    <section class="hero">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="videos/gym-video.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+        </div>
+        <div class="hero-content">
+            <h2 class="animated-text">Transforma Tu Cuerpo</h2>
+            <h3 class="animated-text delay-1">Transforma Tu Vida</h3>
+            <p class="animated-text delay-2">Únete a nuestra comunidad y alcanza tus objetivos fitness</p>
+            <a href="contacto.html" class="btn btn-primary animated-text delay-3">¡Comienza Ahora!</a>
+        </div>
+    </section>
+
+    <!-- Clases destacadas -->
+    <section class="featured-classes">
+        <div class="container">
+            <h2 class="section-title">Clases Destacadas</h2>
+            <div class="classes-grid">
+                <div class="class-card">
+                    <div class="card-image">
+                        <img src="img/class-crossfit.jpg" alt="Clase de CrossFit">
+                    </div>
+                    <div class="card-content">
+                        <h3>CrossFit</h3>
+                        <p>Entrenamiento funcional de alta intensidad para mejorar tu condición física general.</p>
+                        <a href="clases.html#crossfit" class="btn btn-secondary">Ver Detalles</a>
+                    </div>
+                </div>
+                
+                <div class="class-card">
+                    <div class="card-image">
+                        <img src="img/class-yoga.jpg" alt="Clase de Yoga">
+                    </div>
+                    <div class="card-content">
+                        <h3>Yoga</h3>
+                        <p>Mejora tu flexibilidad, equilibrio y paz mental con nuestras clases de yoga.</p>
+                        <a href="clases.html#yoga" class="btn btn-secondary">Ver Detalles</a>
+                    </div>
+                </div>
+                
+                <div class="class-card">
+                    <div class="card-image">
+                        <img src="img/class-spinning.jpg" alt="Clase de Spinning">
+                    </div>
+                    <div class="card-content">
+                        <h3>Spinning</h3>
+                        <p>Cardio intenso con música motivadora para quemar calorías y mejorar tu resistencia.</p>
+                        <a href="clases.html#spinning" class="btn btn-secondary">Ver Detalles</a>
+                    </div>
+                </div>
+                
+                <div class="class-card">
+                    <div class="card-image">
+                        <img src="img/class-musculacion.jpg" alt="Clase de Musculación">
+                    </div>
+                    <div class="card-content">
+                        <h3>Musculación</h3>
+                        <p>Desarrolla tu fuerza y masa muscular con nuestros programas personalizados.</p>
+                        <a href="clases.html#musculacion" class="btn btn-secondary">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contador animado -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="counter" data-target="500">0</div>
+                    <p>Socios Satisfechos</p>
+                </div>
+                <div class="stat-item">
+                    <div class="counter" data-target="30">0</div>
+                    <p>Entrenadores Certificados</p>
+                </div>
+                <div class="stat-item">
+                    <div class="counter" data-target="50">0</div>
+                    <p>Clases Semanales</p>
+                </div>
+                <div class="stat-item">
+                    <div class="counter" data-target="10">0</div>
+                    <p>Años de Experiencia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios en carrusel -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo Que Dicen Nuestros Socios</h2>
+            
+            <div class="carousel-container">
+                <input type="radio" name="testimonial" id="t1" checked>
+                <input type="radio" name="testimonial" id="t2">
+                <input type="radio" name="testimonial" id="t3">
+                
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-image">
+                                <img src="img/testimonial-1.jpg" alt="Testimonio de María">
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>"Desde que me uní a GymFit, mi vida cambió por completo. Los entrenadores son increíbles y el ambiente es muy motivador."</p>
+                                <h4>María González</h4>
+                                <span>Socia desde 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-image">
+                                <img src="img/testimonial-2.jpg" alt="Testimonio de Carlos">
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p>"Las clases de CrossFit son desafiantes pero muy gratificantes. He logrado superar mis límites gracias al apoyo de los entrenadores."</p>
+                                <h4>Carlos Rodríguez</h4>
+                                <span>Socio desde 2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-image">
+                                <img src="img/testimonial-3.jpg" alt="Testimonio de Laura">
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p>"Las clases de yoga me han ayudado no solo físicamente sino también mentalmente. El gimnasio tiene instalaciones de primera calidad."</p>
+                                <h4>Laura Martínez</h4>
+                                <span>Socia desde 2019</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-nav">
+                    <label for="t1"></label>
+                    <label for="t2"></label>
+                    <label for="t3"></label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>Gym<span>Fit</span></h3>
+                    <p>Tu gimnasio de confianza con las mejores instalaciones y entrenadores certificados.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Suscríbete a Nuestro Newsletter</h3>
+                    <p>Recibe consejos fitness, promociones y novedades.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required aria-label="Email para newsletter">
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contáctanos</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@gymfit.com</p>
+                </div>
+                
+                <div class="footer-map">
+                    <h3>Encuéntranos</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-58.43,-34.61,-58.37,-34.57&amp;layer=mapnik" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 GymFit. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

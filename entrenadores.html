@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenadores - GymFit</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/entrenadores.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header con mega-menú (igual que en index.html) -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Gym<span>Fit</span></h1>
+            </div>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav class="main-nav">
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li class="has-submenu">
+                        <a href="clases.html">Clases <i class="fas fa-chevron-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="clases.html#musculacion">Musculación</a></li>
+                            <li><a href="clases.html#crossfit">CrossFit</a></li>
+                            <li><a href="clases.html#yoga">Yoga</a></li>
+                            <li><a href="clases.html#spinning">Spinning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="entrenadores.html" class="active">Entrenadores</a></li>
+                    <li><a href="precios.html">Precios</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html" class="btn-contact">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <div class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle" class="switch">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner de página -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>Nuestros Entrenadores</h1>
+            <p>Conoce a los profesionales que te guiarán en tu camino fitness</p>
+        </div>
+    </section>
+
+    <!-- Entrenadores con tarjetas flip -->
+    <section class="trainers">
+        <div class="container">
+            <h2 class="section-title">Equipo de Profesionales</h2>
+            
+            <div class="trainers-grid">
+                <!-- Entrenador 1 -->
+                <div class="trainer-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="trainer-image">
+                                <img src="img/trainer-1.jpg" alt="Carlos Rodríguez">
+                            </div>
+                            <div class="trainer-info">
+                                <h3>Carlos Rodríguez</h3>
+                                <p>Entrenador de CrossFit</p>
+                                <div class="trainer-social">
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Carlos Rodríguez</h3>
+                            <p>Especialista en CrossFit con más de 8 años de experiencia. Certificado en CrossFit Level 3 Trainer.</p>
+                            
+                            <div class="skill-bars">
+                                <div class="skill">
+                                    <span class="skill-name">CrossFit</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 95%;" data-level="95%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span class="skill-name">Nutrición</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 85%;" data-level="85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span class="skill-name">Fuerza</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 90%;" data-level="90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-text">4.5/5 - 48 reseñas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Entrenador 2 -->
+                <div class="trainer-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="trainer-image">
+                                <img src="img/trainer-2.jpg" alt="Laura Martínez">
+                            </div>
+                            <div class="trainer-info">
+                                <h3>Laura Martínez</h3>
+                                <p>Instructora de Yoga</p>
+                                <div class="trainer-social">
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Laura Martínez</h3>
+                            <p>Instructora certificada de Yoga con 10 años de experiencia. Especialista en Hatha y Vinyasa Yoga.</p>
+                            
+                            <div class="skill-bars">
+                                <div class="skill">
+                                    <span class="skill-name">Yoga</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 98%;" data-level="98%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span class="skill-name">Meditación</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 90%;" data-level="90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span class="skill-name">Flexibilidad</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 95%;" data-level="95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">5/5 - 62 reseñas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Entrenador 3 -->
+                <div class="trainer-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="trainer-image">
+                                <img src="img/trainer-3.jpg" alt="Miguel Sánchez">
+                            </div>
+                            <div class="trainer-info">
+                                <h3>Miguel Sánchez</h3>
+                                <p>Entrenador de Musculación</p>
+                                <div class="trainer-social">
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Miguel Sánchez</h3>
+                            <p>Especialista en hipertrofia y fuerza con 12 años de experiencia. Campeón nacional de culturismo.</p>
+                            
+                            <div class="skill-bars">
+                                <div class="skill">
+                                    <span class="skill-name">Musculación</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 97%;" data-level="97%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span class="skill-name">Nutrición</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 92%;" data-level="92%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span class="skill-name">Rehabilitación</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 85%;" data-level="85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <span class="rating-text">5/5 - 54 reseñas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Entrenador 4 -->
+                <div class="trainer-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="trainer-image">
+                                <img src="img/trainer-4.jpg" alt="Ana López">
+                            </div>
+                            <div class="trainer-info">
+                                <h3>Ana López</h3>
+                                <p>Instructora de Spinning</p>
+                                <div class="trainer-social">
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>Ana López</h3>
+                            <p>Instructora de Spinning con 7 años de experiencia. Especialista en HIIT y entrenamiento cardiovascular.</p>
+                            
+                            <div class="skill-bars">
+                                <div class="skill">
+                                    <span class="skill-name">Spinning</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 96%;" data-level="96%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span class="skill-name">Cardio</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 94%;" data-level="94%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill">
+                                    <span class="skill-name">Resistencia</span>
+                                    <div class="skill-bar">
+                                        <div class="skill-level" style="width: 90%;" data-level="90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="rating">
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <span class="rating-text">4.5/5 - 42 reseñas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificaciones -->
+    <section class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certificaciones</h2>
+            
+            <div class="certifications-grid">
+                <div class="certification-item">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>CrossFit Level 3 Trainer</h3>
+                    <p>Certificación internacional que garantiza conocimientos avanzados en metodología CrossFit.</p>
+                </div>
+                
+                <div class="certification-item">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Yoga Alliance RYT 500</h3>
+                    <p>Registro internacional que certifica 500 horas de formación en enseñanza de yoga.</p>
+                </div>
+                
+                <div class="certification-item">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>NSCA Certified Strength & Conditioning Specialist</h3>
+                    <p>Certificación de élite en entrenamiento de fuerza y acondicionamiento físico.</p>
+                </div>
+                
+                <div class="certification-item">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Spinning® Certified Instructor</h3>
+                    <p>Certificación oficial para impartir clases de Spinning con los más altos estándares.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (igual que en index.html) -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>Gym<span>Fit</span></h3>
+                    <p>Tu gimnasio de confianza con las mejores instalaciones y entrenadores certificados.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Suscríbete a Nuestro Newsletter</h3>
+                    <p>Recibe consejos fitness, promociones y novedades.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required aria-label="Email para newsletter">
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contáctanos</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@gymfit.com</p>
+                </div>
+                
+                <div class="footer-map">
+                    <h3>Encuéntranos</h3>
+                    <div class="map-container">
+                        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-58.43,-34.61,-58.37,-34.57&amp;layer=mapnik" width="100%" height="200" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 GymFit. Todos los derechos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Política de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
