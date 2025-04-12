@@ -399,3 +399,30 @@
         font-size: var(--font-size-normal);
     }
 }
+/* Estilo base para las tarjetas */
+.pricing-card {
+    background-color: white; /* Fondo blanco en modo claro */
+    color: var(--dark-color); /* Texto oscuro en modo claro: #222 */
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+}
+
+/* Ajustes para modo oscuro */
+[data-theme="dark"] .pricing-card {
+    background-color: var(--light-color); /* Fondo oscuro en modo oscuro: #333 */
+    color: var(--dark-color); /* Texto claro en modo oscuro: #f4f4f4 */
+}
+
+/* Asegurar que los textos dentro de las tarjetas sean legibles */
+.pricing-card h2,
+.pricing-card h3,
+.pricing-card p {
+    color: var(--dark-color); /* #222 en modo claro */
+}
+
+[data-theme="dark"] .pricing-card h2,
+[data-theme="dark"] .pricing-card h3,
+[data-theme="dark"] .pricing-card p {
+    color: var(--dark-color); /* #f4f4f4 en modo oscuro */
+}

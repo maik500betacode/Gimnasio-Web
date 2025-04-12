@@ -134,3 +134,16 @@
     animation: countUp 1s var(--transition-normal) forwards;
     display: inline-block;
 }
+.fadeInUp {
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}

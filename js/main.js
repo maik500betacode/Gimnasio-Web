@@ -72,3 +72,71 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+document.querySelector('.comment-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que la página se recargue
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const comment = document.getElementById('comment').value;
+
+    // Mostrar el comentario en la consola como prueba
+    console.log('Nuevo comentario:', name, email, comment);
+
+    // Opcional: Agregar el comentario a la página dinámicamente
+    const commentsContainer = document.querySelector('.comments-container');
+    const newComment = `
+        <div class="comment">
+            <div class="comment-avatar">
+                <div class="avatar-placeholder" data-initials="${name.slice(0, 2).toUpperCase()}"></div>
+            </div>
+            <div class="comment-content">
+                <div class="comment-header">
+                    <h4>${name}</h4>
+                    <span class="comment-date">Justo ahora</span>
+                </div>
+                <p>${comment}</p>
+                <div class="comment-actions">
+                    <a href="#" class="comment-reply">Responder</a>
+                    <a href="#" class="comment-like"><i class="fas fa-heart"></i> 0</a>
+                </div>
+            </div>
+        </div>
+    `;
+    commentsContainer.insertAdjacentHTML('beforeend', newComment);
+
+    // Limpiar el formulario
+    this.reset();
+});
+const filters = document.querySelectorAll('.filter-options input[type="radio"]');
+const posts = document.querySelectorAll('.blog-post, .featured-main, .featured-secondary');
+
+filters.forEach(filter => {
+    filter.addEventListener('change', function() {
+        const category = this.value;
+        posts.forEach(post => {
+            if (category === 'all' || post.classList.contains(category)) {
+                post.style.display = 'block';
+            } else {
+                post.style.display = 'none';
+            }
+        });
+    });
+});
+function revealOnScroll() {
+    const reveals = document.querySelectorAll('.scroll-reveal');
+    reveals.forEach(element => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const revealPoint = 150;
+
+        if (elementTop < windowHeight - revealPoint) {
+            element.classList.add('revealed');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll(); // Ejecutar al cargar la página
+document.querySelectorAll('.avatar-placeholder').forEach(avatar => {
+    const initials = avatar.getAttribute('data-initials');
+    avatar.textContent = initials;
+});

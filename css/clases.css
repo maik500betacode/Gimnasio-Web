@@ -171,25 +171,31 @@
 }
 
 /* Filtrado con CSS */
-#all:checked ~ .container .masonry-grid .class-item {
+/* Mostrar todos los items cuando se selecciona "Todas" */
+#all:checked ~ .classes-gallery .container .masonry-grid .class-item {
     display: block;
 }
 
-#musculacion:checked ~ .container .masonry-grid .class-item:not(.musculacion) {
+/* Filtrar por Musculación */
+#musculacion:checked ~ .classes-gallery .container .masonry-grid .class-item:not(.musculacion) {
     display: none;
 }
 
-#crossfit:checked ~ .container .masonry-grid .class-item:not(.crossfit) {
+/* Filtrar por CrossFit */
+#crossfit:checked ~ .classes-gallery .container .masonry-grid .class-item:not(.crossfit) {
     display: none;
 }
 
-#yoga:checked ~ .container .masonry-grid .class-item:not(.yoga) {
+/* Filtrar por Yoga */
+#yoga:checked ~ .classes-gallery .container .masonry-grid .class-item:not(.yoga) {
     display: none;
 }
 
-#spinning:checked ~ .container .masonry-grid .class-item:not(.spinning) {
+/* Filtrar por Spinning */
+#spinning:checked ~ .classes-gallery .container .masonry-grid .class-item:not(.spinning) {
     display: none;
 }
+
 
 /* Horarios de clases */
 .class-schedule {
@@ -383,4 +389,71 @@
     .class-image.tall {
         grid-row: auto;
     }
+}
+/* Estilo base para el contenedor de filtros */
+.filter-container {
+    background-color: white; /* Fondo blanco en modo claro */
+    color: var(--dark-color); /* Texto oscuro en modo claro: #222 */
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Ajustes para modo oscuro */
+[data-theme="dark"] .filter-container {
+    background-color: var(--light-color); /* Fondo oscuro en modo oscuro: #333 */
+    color: var(--light-color); /* Texto claro en modo oscuro: #f4f4f4 */
+}
+
+/* Estilo para las opciones de filtro */
+.filter-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.filter-options label {
+    padding: 10px 20px;
+    background-color: var(--light-gray); /* #ddd en modo claro */
+    color: var(--dark-color); /* #222 en modo claro */
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-weight: 500;
+}
+
+/* Ajustes para modo oscuro */
+[data-theme="dark"] .filter-options label {
+    background-color: var(--gray-color); /* #aaa en modo oscuro */
+    color: var(--light-color); /* #f4f4f4 en modo oscuro */
+}
+
+/* Estilo cuando una opción está seleccionada */
+.filter-options input[type="radio"]:checked + label {
+    background-color: var(--primary-color); /* Ejemplo: #ff4500 */
+    color: white;
+}
+
+/* Hover para las etiquetas */
+.filter-options label:hover {
+    background-color: var(--secondary-color); /* Ejemplo: #1e90ff */
+    color: white;
+}
+
+/* Ocultar los inputs de radio */
+.filter-options input[type="radio"] {
+    display: none;
+}
+/* Estilo para los títulos dentro de los filtros */
+.filter-container h2 {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--spacing-md);
+    color: var(--dark-color); /* #222 en modo claro */
+}
+
+/* Ajustes para modo oscuro */
+[data-theme="dark"] .filter-container h2 {
+    color: var(--light-color); /* #f4f4f4 en modo oscuro */
 }
